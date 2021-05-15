@@ -7,3 +7,10 @@
 !.yarn/versions
 
 .note.swp
+
+# don t push node module
+**/node_modules
+**/dist
+**/build
+**/..gitignore.swp
+**/dist

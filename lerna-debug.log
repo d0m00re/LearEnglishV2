@@ -1,0 +1,15 @@
+0 silly argv { _: [ 'bootstrap' ], lernaVersion: '4.0.0', '$0': 'lerna' }
+1 notice cli v4.0.0
+2 verbose rootPath /home/jacklapiquette/project/LearnEnglishV2
+3 info versioning independent
+4 error JSONError: Unexpected token "}" (0x7D) in JSON at position 489 while parsing near "...mon\": \"^2.0.6\",\n    }\n  }" in packages/api/package.json
+4 error
+4 error [0m [90m 17 |[39m       [32m"@types/express"[39m[33m:[39m [32m"^4.17.9"[39m[33m,[39m[0m
+4 error [0m [90m 18 |[39m       [32m"nodemon"[39m[33m:[39m [32m"^2.0.6"[39m[33m,[39m[0m
+4 error [0m[31m[1m>[22m[39m[90m 19 |[39m     }[0m
+4 error [0m [90m    |[39m     [31m[1m^[22m[39m[0m
+4 error [0m [90m 20 |[39m   }[0m
+4 error
+4 error     at parseJson (/home/jacklapiquette/project/LearnEnglishV2/node_modules/parse-json/index.js:29:21)
+4 error     at parse (/home/jacklapiquette/project/LearnEnglishV2/node_modules/load-json-file/index.js:15:9)
+4 error     at module.exports (/home/jacklapiquette/project/LearnEnglishV2/node_modules/load-json-file/index.js:18:47)

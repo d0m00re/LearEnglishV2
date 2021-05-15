@@ -5,3 +5,27 @@ yarn set version berry
 
 # .gitignore :
 ! : negate the pattern : if ile exluded will be included
+
+# lerna - create a librairie
+lerna create library
+
+
+
+Learna Bootstrap :
+
+```
+ Lerna allows for installing and linking all the external/shared dependencies, also called bootstrapping, in the mono repo and creating symlinks to the shared dependency locations in the repo.
+```
+
+lerna run build --stream
+
+lerna add --scope=@monorepo/ui -D html-webpack-plugin
+
+TS  config :
+Project References
+Project references are a new feature in TypeScript 3.0 that allow you to structure your TypeScript programs into smaller pieces.
+
+By doing this, you can greatly improve build times, enforce logical separation between components, and organize your code in new and better ways.
+
+We’re also introducing a new mode for tsc, the --build flag, that works hand in hand with project references to enable faster TypeScript builds.
+https://www.typescriptlang.org/docs/handbook/project-references.html
