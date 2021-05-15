@@ -1,0 +1,7 @@
+# yarn : project and package manager
+npm install -g yarn
+# yarn version 2 init
+yarn set version berry
+
+# .gitignore :
+! : negate the pattern : if ile exluded will be included
