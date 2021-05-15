@@ -1,0 +1,44 @@
+{
+  "name": "@monorepo/ui-components",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "jacklapiquette <jackLapiquette@oss.117>",
+  "homepage": "https://github.com/d0m00re/LearnEnglishV2#readme",
+  "license": "ISC",
+  "main": "lib/ui-components.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d0m00re/LearnEnglishV2.git"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "start": "nodemon --inspect dist/index.js",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo",
+    "watch": "tsc -b -w --preserveWatchOutput",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/d0m00re/LearnEnglishV2/issues"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@types/react": "^17.0.5",
+    "babel-loader": "^8.2.2"
+  }
+}
