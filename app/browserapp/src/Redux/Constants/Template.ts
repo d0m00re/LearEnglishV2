@@ -1,0 +1,2 @@
+export const TEMPLATE_RESET = 'TEMPLATE_RESET';
+export const TEMPLATE_SET = 'TEMPLATE_SET';
