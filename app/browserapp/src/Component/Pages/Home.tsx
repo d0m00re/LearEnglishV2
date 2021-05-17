@@ -2,6 +2,9 @@ import React, { ReactElement } from 'react'
 import Typography from '../Atoms/Typography/Typography';
 import styled from 'styled-components';
 
+import CenterLayout from './../Atoms/Layout/CenterLayout';
+
+
 interface Props {
     children : string
 }
@@ -9,7 +12,7 @@ interface Props {
 
 function Home(): ReactElement {
     return (
-        <div>
+        <CenterLayout margin='20% 5% 20% 20%' backgroundColor='cyan'>
             <Typography>React Redux Typescript StyledComponent Storybook Boilerplate</Typography>
 
             <Typography variant='primary' type='h1'>Title h1</Typography>
@@ -28,11 +31,7 @@ function Home(): ReactElement {
 
             <Typography variant='primary' type='body1'>body1</Typography>
             <Typography variant='primary' type='body2'>body2</Typography>
-
-
-
-
-        </div>
+        </CenterLayout>
     )
 }
 

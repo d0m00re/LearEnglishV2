@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
 
-
 import Home from './Component/Pages/Home';
+
+import Dualingo from "./Component/Pages/DuolingoDup/DualingoIndex";
 
 import {
   BrowserRouter as Router,
@@ -42,6 +43,7 @@ function App() {
   return (
     <Router>
       <div>
+        {/*}
         <nav>
           <ul>
             <li>
@@ -55,10 +57,14 @@ function App() {
             </li>
           </ul>
         </nav>
+    */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/dua">
+              <Dualingo />
+          </Route>
           <Route path="/about">
             <MainTitle>About</MainTitle>
           </Route>
@@ -70,6 +76,7 @@ function App() {
               <Home />
             </>
           </Route>
+          
         </Switch>
       </div>
     </Router>
