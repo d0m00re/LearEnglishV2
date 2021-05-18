@@ -12,6 +12,7 @@ const FullPageLayout = styled.div<IFullPageLayout>`
     align-items: center;
     background-color : ${props => (props.backgroundColor) ? props.backgroundColor : 'white'};
     display: flex;
+    flex-direction : column;
     height: 100vh;
     width : 100vw;
     z-index: 1;

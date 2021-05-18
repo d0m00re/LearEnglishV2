@@ -12,7 +12,7 @@ const CenterLayout = styled.div<ICenterLayout> `
     padding : ${props =>  (props === undefined) ? '0' : props.padding};
 
     background-color : ${props => (props === undefined) ? 'transparent' :  props.backgroundColor};
-    z-index : ${props => (props === undefined) ? 1 : props.zindex}
+    z-index : ${props => (props === undefined) ? 1 : props.zindex};
 `;
 
 export default CenterLayout;

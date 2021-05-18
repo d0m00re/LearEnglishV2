@@ -18,14 +18,16 @@ declare module 'styled-components' {
         success : IPaletteElem;
         text : {primary: string, secondary: string, disabled: string, hint : string};
         background : {paper: string, default: string};
+        backgroundButton : { primary : string, secondary : string},
+        link : {primary : string, secondary : string}
     
     };
     
     interface ITypographieElem {
-        fontWeight: number,
-        fontSize: string,
-        lineHeight: number,
-        letterSpacing: string
+        fontWeight: string | number,
+        fontSize: string | number,
+        lineHeight: string | number,
+        letterSpacing: string | number
     };
     
     interface ITypographie {
@@ -46,6 +48,7 @@ declare module 'styled-components' {
             transition : any;
             border : any;
             zIndex : any;
+            link : ITypographieElem;
     }
     
     export interface DefaultTheme { 
