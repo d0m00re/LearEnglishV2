@@ -1,0 +1,16 @@
+For the button case :
+-> composant de boutton totalement parametrable
+-> reutilisatin de la typo ou non?
+<button><typo /><button>
+
+On a besoin de 2 boutton
+
+//type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined;
+interface PropsMyButton {
+    children : ReactNode;
+    onClick : () => any;
+    borderRadius ?: string;
+    borderColor ?: string;
+    backgroundColor ?: string;
+}
+

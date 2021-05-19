@@ -1,0 +1,58 @@
+Exmple react navigation
+
+```
+import React from 'react';
+import { Text, View } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import HomeScreen from './Components/Views/Home';
+import WordLearning from './Components/Views/WordLearning';
+
+import * as ViewApp from './Components/Views/';
+
+/*
+function HomeScreen() {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }} >
+            <Text> Home Screen </Text>
+        </View>
+    );
+}
+*/
+
+const Stack = createStackNavigator();
+
+function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen name="Home" component={ViewApp.HomeView} options={{title : 'Overview' }} />
+                <Stack.Screen name="Learn English Word" component={ViewApp.WordLearningView} />
+                <Stack.Screen name='Testouille'>
+                  {props => <ViewApp.WordLearningView {...props}/>}
+                </Stack.Screen>
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+
+export default App;
+```
+
+```
+function WordLearning({ navigation }: Props) {
+
+    return (
+        <View  style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>World Learning</Text>
+            <Button
+                title='Go to Home'
+                onPress={() => navigation.navigate('Home')}
+            />
+            <Button title="Reload" onPress={() => navigation.push('Learn English Word')} />
+            <Button title="Go back" onPress={() => navigation.goBack()} />
+        </View>
+    )
+};
+```
