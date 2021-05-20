@@ -9,7 +9,7 @@ function MiniLink({}: Props): ReactElement {
             
         </div>
     )
-}
+} 
 */
 const GenLink = styled.a ` 
         text-decoration: none;

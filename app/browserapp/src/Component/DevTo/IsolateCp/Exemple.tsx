@@ -3,67 +3,16 @@ import { ReactComponent as Logo } from './../../../../src/logo.svg'
 import styled from 'styled-components';
 import Theme from './../Theme/Theme';
 import MiniLink from './../Atoms/MiniLink';
-/*
-    --syntax-background-color: #08090a;
-    --syntax-text-color: #f8f8f2;
-    --syntax-comment-color: #808080;
-    --syntax-declaration-color: #f39c12;
-    --syntax-literal-color: #dda0dd;
-    --syntax-error-color: #f9690e;
-    --syntax-name-color: #7ed07e;
-    --syntax-string-color: #f2ca27;
-}
-*/
 
+import * as Icon from './../../../Asset/icon/index';
+
+
+import CardPreviewArt from './../Particules/CardPreviewArticle/Card';
 
 interface Props {
 
 }
 
-const MainTitle = styled.h1` 
-    color : ${Theme.palette.text.background};
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 60px;
-    margin-bottom: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    overflow-wrap: anywhere;
-    text-rendering: optimizespeed;
-    visibility: visible;
-    word-break: break-word;
-`;
-
-const StyledMainTitle = styled(MainTitle)`
-   &:hover {
-        color : ${Theme.palette.hover.link};
-    }
-`;
-
-const SecondaryTitle = styled.h2` 
-color: rgb(8, 9, 10);
-display: block;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-font-size: 24px;
-line-height: 30px;
-overflow-wrap: anywhere;
-text-decoration: rgb(8, 9, 10);
-text-decoration-color: rgb(8, 9, 10);
-text-decoration-line: none;
-text-decoration-style: solid;
-text-decoration-thickness: auto;
-text-rendering: optimizespeed;
-visibility: visible;
-word-break: break-word;
-`;
-
-const StyledSecondaryTitle = styled(SecondaryTitle)` 
-    &:hover {
-        color : ${Theme.palette.hover.link};
-    }
-`;
 
 
 
@@ -71,10 +20,6 @@ const StyledLink = styled.a`
     color: inherit;
     text-decoration: none;
 `;
-
-// primary button
-// secondary button
-//    display: block;
 
 const Button = styled.a` 
     text-decoration-line: none;
@@ -93,6 +38,7 @@ const Button = styled.a`
     font-weight: 500;
     line-height: 24px;
     margin-right: 8px;
+    white-space: nowrap;
 `;
 
 // general implementation
@@ -103,6 +49,7 @@ const PrimaryButton = styled(Button)`
     text-decoration: rgb(59, 73, 223);
     text-decoration-color: rgb(59, 73, 223);
 `;
+
 
 const SecondaryButton = styled(Button)` 
     background-color: rgb(55, 68, 209);
@@ -115,7 +62,10 @@ const SecondaryButton = styled(Button)`
 
     border-radius: 5px;
 `;
+
 // add specific element implementation
+//    padding : 8px 16px;
+
 const StyledPrimaryButton = styled(PrimaryButton)` 
     padding : 8px 16px;
     &:hover {
@@ -123,15 +73,16 @@ const StyledPrimaryButton = styled(PrimaryButton)`
         outline-color: rgb(59, 73, 223)
     }
 `;
+//   
 
 const StyledSecondaryButton = styled(SecondaryButton)` 
     padding : 8px 16px;
-
     &:hover {
         background-color: rgb(57, 70, 215);
 box-shadow: rgba(0, 0, 0, 0.05) 0px 1.22904px 3.45808px 0px;
     }
 `;
+
 
 const FlexRow = styled.div` 
     display : flex;
@@ -165,32 +116,44 @@ const StyledBody = styled.div`
   justify-content: center;
 `;
 
-
-const ArtCard = styled.div` 
-    background-color : ${Theme.palette.bg.paper};
-
-    border-radius : 5px;
-    box-sizing : border-box;
-    border : solid;
-    border-width: 1px; 
-
-    padding : 16px;
+const StyledHeaderInputText = styled.input ` 
+    appearance: none;
+    background-color: rgb(253, 253, 253);
+    box-sizing: border-box;
+    color: rgb(8, 9, 10);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgb(8, 9, 10);
+    outline-style: none;
+    outline-width: 0px;
+    resize: vertical;
+    text-rendering: optimizelegibility;
+    width: 420px;
 `;
 
-const ArtCardBody = styled.div` 
-    padding : 0 0 0 40px;
-`;
-
-const ArtFlexRow = styled(FlexRow) ` 
-    margin-bottom : 8px;
+const StyledContainerHeaderLeft = styled.div ` 
+    display : flex;
+    flex-direction : row;
+    align-items : flex-start;
+    justify-content: center;
 `;
 
 function Exemple({ }: Props): ReactElement {
     return (
         <StyledMain>
             <StyledHeader>
+
                 <HeaderFlexRow>
-                    <Logo style={{ width: '40px', height: '40px' }} />
+                
+                    <div>
+                    <Logo style={{ width: '20px', height: '20px' }} />
+                        <StyledHeaderInputText />
+                    </div>
                     <FlexRow>
                         <StyledPrimaryButton>Log in</StyledPrimaryButton>
                         <StyledSecondaryButton>Create account</StyledSecondaryButton>
@@ -206,29 +169,11 @@ function Exemple({ }: Props): ReactElement {
                 </MiniLink>
                 </div>
                 <div>
+                    <CardPreviewArt />
+                    <CardPreviewArt />
+                    <CardPreviewArt />
+                    <CardPreviewArt />
 
-
-                    <ArtCard>
-                        <ArtCardBody>
-                            <StyledSecondaryTitle>
-                                <StyledLink href='#'>
-                                    🔥Awesome Resource For Your Web Projects: 75+ Background Resources🔥
-                            </StyledLink>
-                            </StyledSecondaryTitle>
-                            <ArtFlexRow>
-                                <MiniLink href='#'>#algorithm</MiniLink>
-                                <MiniLink href='#'>#javascript</MiniLink>
-                                <MiniLink href='#'>#java</MiniLink>
-                                <MiniLink href='#'>#python</MiniLink>
-                            </ArtFlexRow>
-                            <FlexRow>
-                                <StyledLink>2 reactions</StyledLink>
-                                <StyledLink>15 comments</StyledLink>
-                            3min read
-                            <StyledLink>Save</StyledLink>
-                            </FlexRow>
-                        </ArtCardBody>
-                    </ArtCard>
                 </div>
                 <div>
                     toi
