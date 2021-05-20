@@ -7,6 +7,8 @@ import Home from './Component/Pages/Home';
 
 import Dualingo from "./Component/Pages/DuolingoDup/DualingoIndex";
 
+import * as DevToView from "./Component/DevTo";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,11 +33,39 @@ const MainTitle = styled.h1`
   color: ${props => props.theme.palette.text.primary};
 `;
 
-function App2() {
+function RouterDevTo() {
   return (
-    <div className="App">
-      <MainTitle>React Redux Typescript StyledComponent Storybook Boilerplate</MainTitle>
-    </div>
+    <>
+      <Route exact path='/devTo'>
+        <DevToView.Main />
+      </Route>
+      <Route path='/devTo/Isolate'>
+        <DevToView.Isolate />
+      </Route>
+      <Route path='/devTo/Article'>
+        <DevToView.Article />
+      </Route>
+
+    </>
+  );
+};
+
+function RouterOld() {
+  return (
+    <>
+      <Route path="/dua">
+        <Dualingo /> 
+      </Route>
+      <Route path="/about">
+        <MainTitle>About</MainTitle>
+      </Route>
+      <Route path="/users">
+        <MainTitle>Users</MainTitle>
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </>
   );
 }
 
@@ -43,40 +73,9 @@ function App() {
   return (
     <Router>
       <div>
-        {/*}
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-    */}
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/dua">
-              <Dualingo />
-          </Route>
-          <Route path="/about">
-            <MainTitle>About</MainTitle>
-          </Route>
-          <Route path="/users">
-            <MainTitle>Users</MainTitle>
-          </Route>
-          <Route path="/">
-            <>
-              <Home />
-            </>
-          </Route>
-          
+          <RouterDevTo />
+          <RouterOld />
         </Switch>
       </div>
     </Router>
