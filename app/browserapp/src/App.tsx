@@ -9,6 +9,8 @@ import Dualingo from "./Component/Pages/DuolingoDup/DualingoIndex";
 
 import * as DevToView from "./Component/DevTo";
 
+import * as MdnView from "./Component/Mdn/Pages/index";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -69,11 +71,30 @@ function RouterOld() {
   );
 }
 
+function RouterPattern() {
+  <>
+      <Route exact path='/pat'>mdn</Route>
+      <Route exact path='/pat/r1'>mdn display</Route>
+      <Route exact path='/pat/r2'>mdn other</Route>
+    </>
+}
+
+function RouterMdn() { 
+  return ( 
+    <>
+      <Route exact path='/mdn'><MdnView.Home /></Route>
+      <Route exact path='/mdn/article'><MdnView.Article /></Route>
+      <Route exact path='/mdn/isolate'><MdnView.Isolate /></Route>
+    </>
+  )
+}
+
 function App() {
   return (
     <Router>
       <div>
         <Switch>
+          <RouterMdn />
           <RouterDevTo />
           <RouterOld />
         </Switch>
