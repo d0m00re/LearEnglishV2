@@ -1,0 +1,16 @@
+Il faut que je trouve une structure de style\
+que je puisse rapidement editer et 
+ajouter a mes programme avec le moins de odification 
+possible
+avec un theme le plus simple possible
+
+Idee worflow v3:
+
+* recuperer le css de chaque element
+* mettre a jour mes elements dans mon code a partir de partern pre construit 
+
+* Never use div inside my componentsalways use prefis ST for styled components
+
+Create new folder
+AtomStyled
+

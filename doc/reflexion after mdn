@@ -1,0 +1,22 @@
+Lib de composant essentiel non stylisee
+Lib de style possible rapidement accessible
+
+
+En sois faudrait sois te faire ta lib ou bien utiliser une lib de composant qui suit ce principe
+
+Approche base sur un design system:
+
+* design system qui definit les differents elements unitaire du project
+    deifnition de la police, des different titres, button, animation .....
+* styled component de base utilisant le design system 
+
+------------
+* reutilisation de ces composant de base pour generer notre atomic desighn par la suite
+
+
+Avantage :
+* suffit de changer la base qui est ,les briques du design systme pour mettre a jour notre ui correctement dans un autres style
+meilleur approche pour le moment
+
+ ----
+Trouver une lib qui respecte ce principe ou s en faire une

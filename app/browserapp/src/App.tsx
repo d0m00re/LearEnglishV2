@@ -11,6 +11,8 @@ import * as DevToView from "./Component/DevTo";
 
 import * as MdnView from "./Component/Mdn/Pages/index";
 
+import * as Particules from "./Component/Mdn/Particules/index"
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -91,6 +93,8 @@ function RouterMdn() {
 
 function App() {
   return (
+    <>
+    <Particules.HeaderBar />
     <Router>
       <div>
         <Switch>
@@ -100,6 +104,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    </>
   );
 }
 

@@ -22,6 +22,9 @@ interface Props {
 function Home({}: Props): ReactElement {
     return (
         <Atoms.MainLayout>
+
+            
+
             <Atoms.Sub2Layout>
             <div>
                 <Particules.TableOfContents title='Table of contents' list={tableContent} />
