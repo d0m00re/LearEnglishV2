@@ -12,16 +12,16 @@ export interface ITheme {
 
 export const Theme : ITheme = { 
     h1 : {
-        color : {primary : 'red', secondary : 'blue'}
+        color : {primary : 'red', secondary : 'violet'}
     },
     h2 : {
-        color : {primary : 'violet', secondary : 'blue'}
+        color : {primary : 'violet', secondary : 'tomato'}
     },
     h3 : {
-        color : {primary : 'green', secondary : 'blue'}
+        color : {primary : 'green', secondary : 'orange'}
     },
     h4 : {
-        color : {primary : 'gold', secondary : 'blue'}
+        color : {primary : 'gold', secondary : 'red'}
     },
     h5 : {
         color : {primary : 'cyan', secondary : 'blue'}
